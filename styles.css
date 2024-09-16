@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sets the body's dark class so that the body of the page is dark when toggled */
+body.dark {
+    background: #303030;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+.toggle {
+    border: 4px solid #000000;
+    border-radius: 100px;
+    background: #d9d9d9;
+    height: 100px;
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Uses the css ::before attribute inserts extra content which in this case, adds the actual toggle that moves */
+.toggle::before {
+    content: '';
+    border: 4px solid #000000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 2%;
+    top: 6%;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+/* Uses the toggle's active class to clarify what the toggle looks like within its active class */
+.toggle.active::before {
+    content: '';
+    border: 4px solid #000000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 62%;
+    top: 6%;
+    cursor: pointer;
+}
